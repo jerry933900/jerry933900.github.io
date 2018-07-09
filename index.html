@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- 制作表格的js文件 -->
+    <script src="./lib/echarts/echarts.min.js"></script>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="title">黑马19期</div>
+            <div class="bottom">
+                <!-- 头像 -->
+                <img src="./images/default.png" alt="" class="icon img-circle">
+                <!-- 用户名 -->
+                <p class="name">超级管理员</p>
+
+                <!-- 菜单盒子 -->
+                <ul class="menu">
+                    <li>
+                        <a href="./user.html" class="active">
+                            <span class="glyphicon glyphicon-user"></span>用户管理</a>
+                    </li>
+                    <li>
+                        <a  class="togglemenu"><span class="glyphicon glyphicon-list"></span>分类管理</a>
+
+                        <ul class="submenu">
+                            <li><a href="./category.html">一级分类</a></li>
+                            <li><a href="./subcategory.html">二级分类</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./products.html">
+                            <span class="glyphicon glyphicon-tags"></span>商品管理</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="right">
+            <div class="bar">
+                <!-- 左侧的切换按钮 -->
+                <a class="toggle pull-left"><span class="glyphicon glyphicon-align-justify"></span></a>
+                <!-- 登录退出按钮 -->
+                <a class="loginout pull-right"><span class="glyphicon glyphicon-log-out"></span></a>
+            </div>
+
+            <div class="bottom container-fluid">
+                    <ol class="breadcrumb">
+                            <li><a href="#">管理系统</a></li>
+                            <li><a href="#">首页</a></li>
+                    </ol>
+
+                    <div class="charts container-fluid">
+                        <!-- 放柱状图 -->
+                        <div class="bar col-lg-6"></div>
+                        <!-- 放饼图的 -->
+                        <div class="pie col-lg-6"></div>
+                    </div>
+            </div>
+
+        </div>
+
+        <!-- 添加一级分类的弹出框 -->
+        <div class="modal fade" id="loginout-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">温馨提示</h4>
+                    </div>
+                    <!-- 内容 -->
+                    <div class="modal-body">
+                        <!-- 一级分类数据 -->
+                        <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span>您确定退出后台管理系统吗？</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary confirm">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- toggle【开关】【切换】 -->
